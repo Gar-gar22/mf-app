@@ -1,0 +1,7 @@
+{
+  "name": "MAD-FAN ",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
