@@ -1,0 +1,96 @@
+
+.chat{
+ 
+
+    background: transparent !important;
+    --background: transparent !important;
+}
+.chat ion-item{
+       background: transparent !important;
+    --background: transparent !important;
+}
+.chat ion-item .unreed_count{
+       background: var(--ion-color-danger) !important;
+    --background: var(--ion-color-danger) !important;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    color: var(--ion-color-light);
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+.chat ion-item .display_name{ 
+    color: var(--ion-color-light) !important;
+    font-weight: 500;
+}
+.chat ion-item .read_mark{
+        color: var(--ion-text-color-step-350);
+
+ 
+}
+
+.chat ion-item ion-label:nth-of-type(1){
+    margin: 0 20px;
+
+}
+
+
+.message-list{
+    width: 100% !important; 
+    height: 80vh !important; 
+    background: transparent !important;
+    --background: transparent !important;
+  display: flex;
+  flex-direction: column;  
+  overflow-y: auto;
+    
+}
+
+
+.message-list  div.msg-right {   
+    align-self: flex-end !important;
+     background: var(--ion-text-color-step-250);
+
+}
+
+.message-list  div.msg-left {   
+    align-self: flex-start !important;
+     background: var(--ion-text-color-step-150);
+}
+
+.message-list  div { 
+    max-width: 60% !important;
+    margin: 10px ;
+    padding: 10px;
+    border-radius: 10px;
+   
+    color: var(--ion-color-light);
+
+}
+.msg-text {
+    font-size: 14px !important;
+    color: var(--ion-color-light) !important;
+    margin: 0;
+}
+.msg-time {
+    font-size: 10px !important;
+    color: var(--ion-text-color-step-850);
+    margin-top: 5px; 
+    text-align: right;
+}
+.message-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;  
+        background: var(--ion-text-color-step-350);
+    color: var(--ion-color-light);
+    position: fixed;
+    bottom: 0;
+    width: 100%;    
+}
+
+ 

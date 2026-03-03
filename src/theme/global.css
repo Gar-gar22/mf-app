@@ -1,0 +1,338 @@
+.community,
+.community {
+    --background: transparent !important;
+    background: transparent !important;
+}
+
+.community ion-item  ion-img{
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+.community ion-item {
+    --background: var(--ion-color-light) !important;
+}
+
+.community ion-item ion-img {
+    width: 70px !important;
+}
+
+.community-title {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.community-title .title {
+     text-transform: capitalize;
+    color: var(--ion-color-primary);
+}
+.community-title .title p{
+    font-size: 20px;
+   
+   
+}
+.community-title .desc {
+color: var(--ion-background-color-step-450);
+}
+
+.community-title .btn {
+    text-align: right;
+    float: right;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    transform: translateY(10px);
+}
+
+.community-title .fans {
+    color: var(--ion-color-secondary);
+    font-weight: 400;
+}
+
+.community-btn {
+    width: 100%;
+    height: 20px; 
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(20px);
+
+}
+
+.community-btn {
+    color: var(--ion-background-color-step-150);
+}
+
+.community-btn .boost {
+    color: rgb(185, 34, 34);
+}
+
+.status,
+.status ion-list {
+    background: var(--ion-color-light) !important;
+    --background: var(--ion-color-light) !important;
+}
+
+.status p {
+    font-size: 20px;
+    width: 100%;
+    height: 30px;
+    color: var(--ion-color-primary);
+    margin: 10px 20px;
+}
+
+.status ion-list,
+.status div {
+    min-width: 100%;
+    height: 100px;
+    display: flex;
+    overflow-x: scroll !important;
+}
+
+.status div ion-avatar {
+    width: 70px;
+    height: 70px;
+    margin: 4px;
+    border: 2px solid greenyellow;
+}
+
+ion-segment {
+    width: 90%;
+    height: 40px;
+    margin: 10px auto;
+    background: var(--ion-color-light);
+    font-weight: 600;
+    --indicator-color: var(--ion-color-primary);
+    color: var(--ion-color-primary);
+    border-radius: 30px !important;
+
+}
+
+ion-segment ion-segment-button {
+    font-weight: 600;
+    color: var(--ion-color-primary);
+}
+
+.segment-button-checked {
+    background: transparent;
+    font-weight: 600;
+    --indicator-color: var(--ion-background-color-step-50);
+    color: var(--ion-color-primary) !important;
+    height: 90% !important;
+    border: 1px solid var(--ion-color-light);
+    border-radius: 30px !important; 
+            --border-radius: 7px;
+ 
+            padding: 4px;
+}
+
+
+.wallet-header,
+.wallet-header ion-toolbar {
+    --background: var(--ion-background-color-step-950) !important;
+}
+
+.wallet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wallet .wallet-balance {
+    width: 100%;
+    height: 200px;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--ion-background-color-step-950);
+    color: var(--ion-color-light);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.wallet-balance .balance {
+
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.wallet-balance .value {
+    margin: 0;
+    color: var(--ion-background-color-step-250);
+}
+
+.wallet-btn {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    justify-self: flex-start;
+    transform: translateY(30px);
+}
+
+.wallet-btn div {
+    width: 50px;
+    height: 50px;
+    background: var(--ion-background-color-step-650);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 25px;
+}
+
+.wallet-avatar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 10px;
+
+    background: var(--ion-background-color-step-950);
+}
+
+.wallet-avatar ion-avatar {
+    width: 25px;
+    height: 25px;
+}
+
+.wallet-address {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ion-color-light);
+
+    padding: 0;
+}
+
+.wallet-address p {
+    padding: 2px 10px;
+    margin: 3px;
+    background: var(--ion-background-color-step-250);
+    color: var(--ion-color-primary);
+    border-radius: 20px;
+}
+
+.avatar {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wallet-history,
+.wallet-history * {
+    background: transparent !important;
+    --background: transparent !important;
+}
+
+.wallet-history ion-item {
+    background: var(--ion-color-primary) !important;
+    color: var(--ion-background-color-step-50);
+}
+
+.spinnner-loader{
+    background: transparent !important;
+    --background: transparent !important;
+}
+.profile {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+     background: var(--ion-color-secondary);
+     
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px; 
+}
+.profile-frame { 
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    position: relative; 
+}
+
+.profile-frame ion-avatar{
+    width: 80px;
+    height: 80px;
+}
+
+.profile .profile-check {
+    position: absolute; 
+    bottom:-5px;
+    right: 0;
+    ion-icon{
+       color:  green !important;
+       background: var(--ion-color-light);
+       border-radius: 50%;
+    }
+  
+
+
+}
+.profile  .username {
+    height: 50px;
+    color: var(--ion-color-light); 
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile  .username p {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+}
+.profile  .username span {
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--ion-background-color-step-250);
+}
+
+
+.profile-user-btn { 
+        display: flex; 
+    justify-content: center;
+    align-items: center; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+.profile-user-btn .user-btn {
+    
+        display: flex; 
+        flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    background: var(--ion-color-secondary-shade);
+    width: 80px;
+    height: 50px;
+}
+.profile-user-btn .user-btn span {
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--ion-color-light);
+}
+.profile-user-btn .user-btn span:nth-of-type(2) {
+    font-size: 10px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--ion-background-color-step-250);
+    text-transform: uppercase;
+}
