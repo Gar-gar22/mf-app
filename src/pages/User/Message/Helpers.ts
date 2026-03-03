@@ -17,8 +17,19 @@ export const  MarkAsRead = (conversationId: string) => {
 }   
 
 
-export const getUnread = ( message, chat_user, current_user) => {
+interface Message {
+    created_at: string;
+    sender_id: string;
+}
 
-   return message.created_at > chat_user.last_read_at && message.sender_id != current_user.id
+interface ChatUser {
+    last_read_at: string;
+}
 
+interface CurrentUser {
+    id: string;
+}
+
+export const getUnread = (message: Message, chat_user: ChatUser, current_user: CurrentUser): boolean => {
+    return message.created_at > chat_user.last_read_at && message.sender_id != current_user.id
 }

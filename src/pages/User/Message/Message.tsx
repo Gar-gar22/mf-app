@@ -1,4 +1,5 @@
-import { IonAvatar, IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonImg, IonInput, IonLabel, IonList, IonPage, IonToolbar, useIonViewDidEnter, useIonViewWillEnter, useIonViewWillLeave } from '@ionic/react'
+import { IonAvatar, IonButton, IonButtons, IonContent, IonHeader, IonIcon, IonImg, IonInput,
+     IonLabel, IonList, IonPage, IonToolbar, useIonViewWillEnter, useIonViewWillLeave } from '@ionic/react'
 import { add, ellipsisHorizontalOutline } from 'ionicons/icons'
 import { useEffect, useRef, useState } from 'react'
 import Client from '../../Client';
@@ -11,6 +12,12 @@ import MessageCard from './components/MessageCard';
 
 interface MessageProps {
     SetCloseTabs: (close: boolean) => void;
+}
+
+interface ChatData {
+    avatar: string;
+    display_name: string;
+    [key: string]: any;
 }
 
 const Message = ({ SetCloseTabs }: MessageProps) => {
@@ -31,7 +38,7 @@ const Message = ({ SetCloseTabs }: MessageProps) => {
 
     const [Messages, setMessages] = useState<ChatMessage[]>([])
     const [text, setText] = useState('')
-    const [Chat, setChat] = useState({})
+    const [Chat, setChat] = useState<ChatData | undefined>()
     const { data: user, } = useMe();
     const { id } = useParams() as { id: string };
     const conversationId = id; // TEMP — replace with real ID from API
@@ -69,7 +76,7 @@ const Message = ({ SetCloseTabs }: MessageProps) => {
         Client.post(`/chat/${id}/mark-read`)
         const channel = echo.private(`chat.${conversationId}`); 
         channel.subscribed(() => console.log("Subscribed"))
-            .listen(".message.sent", (e) => { 
+            .listen(".message.sent", (e: ChatMessage) => { 
                  LoadMessages(e)
                 
             });
@@ -82,7 +89,7 @@ const Message = ({ SetCloseTabs }: MessageProps) => {
     }, [conversationId, Messages]);
 
 
-    const LoadMessages = async (message)=>{
+    const LoadMessages = async (message: ChatMessage)=>{
        await setMessages((prev) => [ ...prev, message, ]);
     }
 
@@ -136,7 +143,7 @@ const Message = ({ SetCloseTabs }: MessageProps) => {
 
                 <div className='message-form'>
                     <IonIcon size='large' icon={add} />
-                    <IonInput type='text' placeholder='Type a message' value={text} onIonInput={(e) => setText(e.detail.value)} />
+                    <IonInput type='text' placeholder='Type a message' value={text} onIonInput={(e) => setText(e.detail.value || '')} />
                     <IonButton onClick={SendMessage}>Send</IonButton>
                 </div>
 

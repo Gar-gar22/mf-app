@@ -35,10 +35,10 @@ export const echo = new Echo({
             }
           );
 
-          callback(false, response.data);
+          callback(null, response.data);
           console.log( response.data)
         } catch (error) {
-          callback(true, error);
+          callback(null,  error);
           console.log('erro from custom channel authorizer')
         }
       },

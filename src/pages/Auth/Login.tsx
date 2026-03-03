@@ -44,10 +44,10 @@ const handleSubmit = async () => {
             <IonList inset={true} className='login'>
                
                <IonItem lines='none'>
-                <IonInput onIonInput={(e)=>setEmail(e.target.value)}  type='text' value={Email}/>
+                <IonInput onIonInput={(e)=>setEmail(e.target.value ?? '')}  type='text' value={Email}/>
                </IonItem> 
                <IonItem lines='none'>
-                <IonInput onIonInput={(e)=>setPassword(e.target.value)}  type='password' value={Password}/>
+                <IonInput onIonInput={(e)=>setPassword(e.target.value ?? '')}  type='password' value={Password}/>
                </IonItem> 
                <IonButton onClick={handleSubmit}> Login </IonButton>
             </IonList> 

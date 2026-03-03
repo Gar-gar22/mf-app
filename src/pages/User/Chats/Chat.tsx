@@ -9,7 +9,7 @@ import { echo } from '../../../echo'
 
 const Chat = () => {
     const { data: user } = useMe()
-    const [Data, setData] = useState({})
+    const [Data, setData] = useState<any[]>([]);
 
     const GetChat = () => {
 

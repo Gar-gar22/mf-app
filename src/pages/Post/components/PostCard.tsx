@@ -1,7 +1,7 @@
 import { IonAvatar, IonCard, IonCardContent, IonContent, IonFooter, IonIcon, IonImg, IonItem, IonLabel, IonModal } from '@ionic/react'
 import { heartSharp, heartOutline, chatboxEllipsesOutline, eyeOutline, shareSocialOutline } from 'ionicons/icons'
 import { BadgeCheck } from 'lucide-react'
-import React from 'react'
+import React, { useState } from 'react'
 import { user_icon, user_avatar } from '../../Home'
 interface POST_Interface {
   id:string;
@@ -14,8 +14,9 @@ interface POST_Interface {
   }
 }
 const PostCard  = ({m}) => {
+  const [isOpen, setIsOpen] = useState(m.id ?? true)
   return (
-    <IonModal  trigger={m?.id}>
+    <IonModal  isOpen={isOpen}  onWillDismiss={() => setIsOpen(false)}>
       <IonContent fullscreen className='post'  > 
           <IonItem lines='none' routerLink='#'>
             <IonAvatar slot='start' style={{ width: '35px', height: '35px' }}><IonImg src={user_icon}></IonImg></IonAvatar>

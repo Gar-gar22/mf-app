@@ -1,9 +1,8 @@
-import { IonAvatar, IonCard, IonCardContent, IonCardTitle, IonContent, IonFooter, IonHeader, IonIcon, IonImg, IonItem, IonLabel, IonModal, IonPage, IonProgressBar, IonTitle, IonToolbar, useIonLoading, useIonViewWillEnter } from '@ionic/react';
+import { IonAvatar, IonCard, IonCardContent, IonCardTitle, IonContent, IonFooter, IonHeader, IonIcon, IonImg, IonItem, IonLabel, IonPage, IonProgressBar, IonToolbar, useIonLoading, useIonViewWillEnter } from '@ionic/react';
 import './Home.css';
-import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { BadgeCheck, Flame } from 'lucide-react';
-import { chatboxEllipsesOutline, ellipsisHorizontal, ellipsisHorizontalOutline, eyeOutline, flashOutline, heartOutline, heartSharp, settingsOutline, shareSocialOutline } from 'ionicons/icons';
+import { chatboxEllipsesOutline, ellipsisHorizontalOutline, eyeOutline, flashOutline, heartOutline, heartSharp, shareSocialOutline } from 'ionicons/icons';
 import Client from './Client';
 import PostCard from './Post/components/PostCard';
 
@@ -13,7 +12,7 @@ export const user_icon =  'https://www.bing.com/th/id/OIP.IznpuT0U1Pn3hg2mthVpLg
 export const logo = 'https://static.vecteezy.com/system/resources/previews/014/600/616/original/mf-letter-logo-design-in-illustration-logo-calligraphy-designs-for-logo-poster-invitation-etc-vector.jpg'
 
 const Home: React.FC = () => {
-  const [data, setData] = useState()
+  const [data, setData] = useState<any[]>([]);
   const [present, dismiss] = useIonLoading()
 
 
@@ -84,7 +83,7 @@ const Home: React.FC = () => {
         {
           data && data?.map((m, index: number) => (
             <div key={index} id={m.id} >
-               <PostCard  m={m}> </PostCard>
+               <PostCard  m={m}/>  
 
               <IonCard className='post' >
                 <IonItem lines='none'  >

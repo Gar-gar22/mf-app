@@ -7,7 +7,7 @@ import Client from './Client'
 
 const Community = () => {
 
-    const [data, setData] = useState();
+   const [Data, setData] = useState<any[]>([]);
     const [com_data, setCom_Data] = useState();
     const [present, dismiss] = useIonLoading()
     const [isOpen, setIsOpen] = useState(false)
